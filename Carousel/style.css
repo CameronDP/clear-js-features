@@ -1,0 +1,57 @@
+* {
+	box-sizing:border-box;
+  }
+/* dots to go to */
+    .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	text-align: center;
+}
+
+/* What happens when the mouse is on the dots or when a dot is clicked */
+.dot:hover, .active
+{
+	background-color: #717171;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* adds additional styles to the .next id */
+.next 
+{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+#carousel
+{
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+.mainImage
+{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
