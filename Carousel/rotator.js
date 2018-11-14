@@ -40,7 +40,7 @@ function init(){
 	
 	//restarts the rotation when the mouse leaves*
 	mainImage.onmouseout = function () {
-		intervalId = setInterval(changeImage,5000);
+		intervalId = setInterval(changeImage, 5000);
 	};
 }
 
