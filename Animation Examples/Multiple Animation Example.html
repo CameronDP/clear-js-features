@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Multiple Animation Example</title>
+		
+		<style type="text/css">
+			/*Specifying multiple animations for 1 element type. */
+			p {
+				animation-name: bounce, fadeInOut, moveLeft20px;
+				animation-duration: 2.5s, 5s, 1s;
+				animation-iteration-count: 2, 1;
+				animation-direction: alternate;				
+				/**
+				 * When specifying multiple animation properties like this, the list will loop back around.
+				 * In this case, fadeInOut will iterate 2 times, moveLeft20px will iterate 1 time, and 
+				 * bounce will iterate 2 times.
+				 */
+			}
+			
+			@keyframes moveLeft20px {
+				from {
+					position: relative;
+					left: 0px;
+				}
+				to {
+					position: relative;
+					left: 20px;
+				}
+			}
+			
+			@keyframes fadeInOut {
+				from {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			
+			@keyframes bounce{
+				from {
+					position: relative;
+					bottom: 0px;
+				}
+				15% {
+					position: relative;
+					bottom: 10px;
+				}
+				30% {
+					position: relative;
+					bottom: 0px;
+				}
+				70% {
+					position: relative;
+					bottom: 10px;
+				}
+				to {
+					position: relative;
+					bottom: 0px;
+				}
+			}
+		</style>
+		
+		<script type="text/javascript">
+		</script>
+	</head>
+	<body>
+			<p> 
+			"It's wierd to look back at things. Once they are behind you, what does it matter?"
+			"Well, when something is behind you it can throw things at the back of your head."
+			</p>
+	</body>
+</html>
+	
