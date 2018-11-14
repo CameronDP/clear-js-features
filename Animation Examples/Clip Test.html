@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Clip Test</title>
+		
+		<style type="text/css">
+			img.clip {
+				/**
+				 * Clipping requires an absolute position element
+				 * which can cause none-absolute position elements 
+				 * to overlap with the absolute position element.
+				 */
+				position: absolute;
+				/*rect(top, right, bottom, left)*/
+				clip: rect(0px, 300px, 300px, 0px);
+			}
+			
+			img.clip-path {
+				width: 50%;
+				height: auto;
+				/*inset(top right bottom left)*/
+				clip-path: inset(7% 22% 40% 16%);
+			}
+		</style>
+		
+		<script type="text/javascript">
+		</script>
+	</head>
+	<body>
+		<img class="clip" src="lion.jpg">
+		<div style="position: absolute; top: 350px;">
+		<p>
+			The Caterpillar and Alice looked at each other for some time in silence:
+			at last the Caterpillar took the hookah out of its mouth, and addressed
+			her in a languid, sleepy voice.
+		</p>
+		<img class="clip-path" src="Canine2.jpg">
+		</div>
+	</body>
+</html>
+	
